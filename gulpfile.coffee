@@ -1,7 +1,7 @@
 # out: gulpfile.js, sourcemap: false
 gulp = require "gulp"
 concat = require "gulp-concat"
-aop = require "gulp-aop"
+aop = require "./index.js"
 
 gulp.task "default", ->
     gulp.src ["test/a.js", "test/b.js"]

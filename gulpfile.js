@@ -5,7 +5,7 @@
 
   concat = require("gulp-concat");
 
-  aop = require("gulp-aop");
+  aop = require("./index.js");
 
   gulp.task("default", function() {
     return gulp.src(["test/a.js", "test/b.js"]).pipe(concat("t.min.js")).pipe(aop({
