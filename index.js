@@ -1,4 +1,3 @@
-// var through = require("through-gulp");
 var through = require('through2');
 var fs = require("fs");
 
@@ -12,8 +11,6 @@ module.exports = function (opt) {
     }) + "());";
 
     function bufferContents(file, encoding, callback) {
-        console.log(file.contents.toString());
-
         if (file.isNull()) {
             this.push(file);
             return callback();

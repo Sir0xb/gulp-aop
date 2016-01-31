@@ -1,23 +1,21 @@
 (function() {
-  var aop, concat, gulp, uglify;
+  var aop, concat, gulp;
 
   gulp = require("gulp");
 
   concat = require("gulp-concat");
 
-  uglify = require("gulp-uglify");
-
-  aop = require("./index.js");
+  aop = require("gulp-aop");
 
   gulp.task("default", function() {
     return gulp.src(["test/a.js", "test/b.js"]).pipe(concat("t.min.js")).pipe(aop({
       header: function() {
-        return console.log('注入进去了，这只是开始');
+        return console.log('Inject to the head');
       },
       footer: function() {
-        return console.log('注入进去了，这是个漂亮的结束');
+        return console.log('Inject to the end');
       }
-    })).pipe(uglify()).pipe(gulp.dest("./test"));
+    })).pipe(gulp.dest("./test"));
   });
 
 }).call(this);
