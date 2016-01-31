@@ -25,7 +25,9 @@ gulp.task "default", ->
 ```
 
 ### API
-check this file: `index.js`
+options
+    header: inject function to the head.
+    footer: inject function to the end.
 
 ### Contributing
 - Fork this Repo first
