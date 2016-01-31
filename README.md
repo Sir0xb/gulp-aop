@@ -25,9 +25,11 @@ gulp.task "default", ->
 ```
 
 ### API
+```
 options
     header: inject function to the head.
     footer: inject function to the end.
+```
 
 ### Contributing
 - Fork this Repo first
